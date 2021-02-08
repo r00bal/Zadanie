@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>PureJS</title>
+  <script type="text/html" id="home">
+   
+    <div class="card marginTop100px">
+      <h1 class="card__title">Sign in</h1>
+      <form class="form" type="POST" id="loginForm">
+        <div id="error-message" class="form__error-message">Incorrect username or password</div>
+        <label class="form__label" for="login">Login</label>
+        <input class="form__input" type="text" id="login" />
+        <label class="form__label" for="password">Password</label>
+        <input class="form__input" type="password" id="password" />
+        <input class="form__submit" type="submit" value="Submit"/>
+    </form>
+  </div>
+  </script>
+  <script type="text/html" id="success">
+    <h1></h1>
+    <div class="card marginTop100px">
+      <h1 class="card__title textAlignCenter"><%= title %></h1>
+     
+  </div>
+   
+  </script>
+  
+  <script type="text/html" id="404">
+    <h1>404 Not found</h1>
+  </script>
+  <style>
+*, body, html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  min-height: 100%;
+}
+
+body {
+background-image: linear-gradient(-45deg, #FFC796 0%, #FF6B95 100%);
+height:100%;
+width:100vw;
+font-family: 'Roboto', sans-serif;
+}
+
+.card {
+  padding: 60px 68px 40px;
+    display: flex;
+    flex-direction: column;
+    min-height: 260px;
+    background-color: #FEFEFE;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 100%;
+    margin: auto auto 100px;
+    max-width: 450px;
+}
+
+.card__title {
+  color: black;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 28px;
+}
+
+
+
+.form { 
+  display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    width: 100%;
+}
+.form__error-message {
+  border-radius: 8px;
+  background: #E2596F;
+    font-size: 14px;
+    margin: 0px 0px 16px;
+    color: white;
+    padding: 15px 20px;
+    display: none;
+}
+
+.form__label {
+margin-bottom: 5px;
+}
+
+.form__input {
+    background: #F3F3F3;
+    border: 2px solid #F3F3F3;
+    border-radius: 8px;
+    color: black;
+    line-height: 40px;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+}
+
+.form__submit:focus {
+  outline:0 !important;
+  background:#3375cc;
+}
+
+.form__input:focus,.form__input:active {
+  outline:0 !important;
+  border: 2px solid #F3F3F3;
+  background: #ffffff;
+}
+
+.form__submit {
+    background:#4693F8;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 24px 0px 12px;
+    padding: 16px;
+    border: 0px;
+    color: white;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+.form__submit:hover {
+  background:#3375cc;
+}
+
+.marginTop100px {
+margin-top: 100px;
+}
+
+.js-active {
+  display: block;
+}
+
+.textAlignCenter {
+  text-align: center;
+}
+
+  </style>
+</head>
+<body>
+ 
+  <div id="app"></div>
+  <script src="./app.js"></script>
+</body>
+</html>
