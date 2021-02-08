@@ -1,37 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <title>PureJS</title>
-  <script type="text/html" id="home">
-   
-    <div class="card marginTop100px">
-      <h1 class="card__title">Sign in</h1>
-      <form class="form" type="POST" id="loginForm">
-        <div id="error-message" class="form__error-message">Incorrect username or password</div>
-        <label class="form__label" for="login">Username</label>
-        <input class="form__input" type="text" id="login" />
-        <label class="form__label" for="password">Password</label>
-        <input class="form__input" type="password" id="password" />
-        <input class="form__submit" type="submit" value="Submit"/>
-    </form>
-  </div>
-  </script>
-  <script type="text/html" id="success">
-    <h1></h1>
-    <div class="card marginTop100px">
-      <h1 class="card__title textAlignCenter"><%= title %></h1>
-     
-  </div>
-   
-  </script>
-  
-  <script type="text/html" id="404">
-    <h1>404 Not found</h1>
-  </script>
-  <style>
+
 
     :root {
       --orange:  #FFC796;
@@ -150,11 +117,3 @@ margin-top: 100px;
   text-align: center;
 }
 
-  </style>
-</head>
-<body>
- 
-  <div id="app"></div>
-  <script src="./app.js"></script>
-</body>
-</html>
