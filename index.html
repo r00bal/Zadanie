@@ -32,6 +32,17 @@
     <h1>404 Not found</h1>
   </script>
   <style>
+
+    :root {
+      --orange:  #FFC796;
+      --pink: #FF6B95;
+      --red: #E2596F;
+      --sky: #4693F8;
+      --blue: #3375cc;
+      --radius: 8px;
+      --whiteGrey: #FEFEFE;
+      --lightGrey: #F3F3F3;
+    }
 *, body, html {
   box-sizing: border-box;
   margin: 0;
@@ -42,7 +53,7 @@ html {
 }
 
 body {
-background-image: linear-gradient(-45deg, #FFC796 0%, #FF6B95 100%);
+background-image: linear-gradient(-45deg, var(--orange) 0%, var(--pink) 100%);
 height:100%;
 width:100vw;
 font-family: 'Roboto', sans-serif;
@@ -53,9 +64,9 @@ font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 260px;
-    background-color: #FEFEFE;
+    background-color: var(--whiteGrey);
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: var(--radius);
     width: 100%;
     margin: auto auto 100px;
     max-width: 450px;
@@ -77,8 +88,8 @@ font-family: 'Roboto', sans-serif;
     width: 100%;
 }
 .form__error-message {
-  border-radius: 8px;
-  background: #E2596F;
+  border-radius: var(--radius);
+  background: var(--red);
     font-size: 14px;
     margin: 0px 0px 16px;
     color: white;
@@ -91,9 +102,9 @@ margin-bottom: 5px;
 }
 
 .form__input {
-    background: #F3F3F3;
-    border: 2px solid #F3F3F3;
-    border-radius: 8px;
+    background: var(--lightGrey);
+    border: 2px solid var(--lightGrey);
+    border-radius: var(--radius);
     color: black;
     line-height: 40px;
     padding: 5px 20px;
@@ -102,17 +113,17 @@ margin-bottom: 5px;
 
 .form__submit:focus {
   outline:0 !important;
-  background:#3375cc;
+  background: var(--blue);
 }
 
 .form__input:focus,.form__input:active {
   outline:0 !important;
-  border: 2px solid #F3F3F3;
+  border: 2px solid var(--lightGrey);
   background: #ffffff;
 }
 
 .form__submit {
-    background:#4693F8;
+    background: var(--sky);
     border-radius: 8px;
     font-size: 16px;
     font-weight: bold;
@@ -124,7 +135,7 @@ margin-bottom: 5px;
     transition: all .2s ease;
 }
 .form__submit:hover {
-  background:#3375cc;
+  background:var(--blue);
 }
 
 .marginTop100px {
